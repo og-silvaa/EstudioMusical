@@ -31,7 +31,7 @@ Este proyecto está estructurado como un proyecto Maven multi-módulo:
 - Java 17 o superior
 - Maven 3.6 o superior
 - Node.js 18 o superior
-- MongoDB 4.4 o superior
+- MongoDB 4.4 o superior (o Docker para ejecutar MongoDB en contenedor)
 
 ## 🚀 Instalación y Ejecución
 
@@ -44,10 +44,19 @@ cd EstudioMusical
 
 ### 2. Iniciar MongoDB
 
+#### Opción A: Con Docker (Recomendado)
+
+```bash
+docker-compose up -d
+```
+
+#### Opción B: MongoDB Local
+
 Asegúrate de tener MongoDB corriendo en `localhost:27017`:
 
 ```bash
 mongod
+```
 ```
 
 ### 3. Construir el proyecto completo
@@ -64,6 +73,8 @@ mvn spring-boot:run
 ```
 
 El backend estará disponible en: http://localhost:8080
+
+**Nota:** El backend carga automáticamente datos de ejemplo (4 salas) al iniciar por primera vez con la base de datos vacía.
 
 ### 5. Ejecutar el Frontend (en otra terminal)
 
