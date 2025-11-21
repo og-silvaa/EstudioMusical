@@ -28,7 +28,7 @@ public class RoomController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Room> getRoomById(@PathVariable String id) {
+    public ResponseEntity<Room> getRoomById(@PathVariable("id") String id) {
         return roomService.getRoomById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

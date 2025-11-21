@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: estudio-musical-backend
+  
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/estudiomusical
+      database: estudiomusical
+      auto-index-creation: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.estudiomusical: DEBUG
+    org.springframework.data.mongodb: DEBUG

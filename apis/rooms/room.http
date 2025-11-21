@@ -1,0 +1,83 @@
+### Variables
+@baseUrl = http://localhost:8080/api/rooms
+@roomId = 6920f0cce818bd17e3604b1f
+@contentType = application/json
+
+### ========== ROOMS API ==========
+
+### 1. Listar todas las salas
+GET {{baseUrl}}
+
+### 2. Listar solo salas disponibles
+GET {{baseUrl}}/available
+
+### 3. Obtener sala por ID
+GET {{baseUrl}}/{{roomId}}
+
+### 4. Crear nueva sala
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Sala de Jazz",
+  "description": "Sala acogedora para ensayos de jazz",
+  "capacity": 4,
+  "pricePerHour": 18.0,
+  "availableInstruments": ["Piano", "Contrabajo", "Batería Jazz"],
+  "availableMicrophones": ["AKG C414", "Shure SM57"],
+  "available": true
+}
+
+### 5. Actualizar sala existente
+PUT {{baseUrl}}/{{roomId}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Sala Rock Actualizada",
+  "description": "Sala amplia ideal para bandas de rock - ACTUALIZADA",
+  "capacity": 6,
+  "pricePerHour": 30.0,
+  "availableInstruments": ["Batería", "Amplificador Guitarra", "Amplificador Bajo", "Teclado"],
+  "availableMicrophones": ["Shure SM58", "Shure SM57", "Sennheiser e835"],
+  "available": true
+}
+
+### 6. Eliminar sala
+DELETE {{baseUrl}}/{{roomId}}
+
+### ========== PRUEBAS CON DATOS DINÁMICOS ==========
+
+### 7. Crear sala con timestamp
+# @name nuevaSala
+POST {{baseUrl}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Sala Test {{$timestamp}}",
+  "description": "Sala de prueba creada automáticamente",
+  "capacity": 3,
+  "pricePerHour": 15.0,
+  "availableInstruments": ["Guitarra"],
+  "availableMicrophones": ["Shure SM58"],
+  "available": true
+}
+
+### 8. Obtener la sala recién creada
+GET {{baseUrl}}/{{nuevaSala.response.body.id}}
+
+### 9. Actualizar la sala recién creada
+PUT {{baseUrl}}/{{nuevaSala.response.body.id}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Sala Test Actualizada",
+  "description": "Sala actualizada desde API test",
+  "capacity": 5,
+  "pricePerHour": 22.0,
+  "availableInstruments": ["Guitarra", "Bajo", "Batería"],
+  "availableMicrophones": ["Shure SM58", "Shure SM57"],
+  "available": true
+}
+
+### 10. Eliminar la sala recién creada
+DELETE {{baseUrl}}/{{nuevaSala.response.body.id}}
