@@ -18,7 +18,7 @@
     <description>API REST para gestión de reservas de salas de ensayo</description>
 
     <properties>
-        <spring-boot.version>3.2.0</spring-boot.version>
+        <spring-boot.version>3.4.0</spring-boot.version>
     </properties>
 
     <dependencyManagement>
