@@ -21,8 +21,8 @@ public class Room {
     private String description;
     private Integer capacity;
     private Double pricePerHour;
-    private List<String> availableInstruments;
-    private List<String> availableMicrophones;
+    private List<Equipment> availableInstruments;
+    private List<Equipment> availableMicrophones;
     private Boolean available;
 
 }

@@ -1,6 +1,6 @@
 ### Variables
 @baseUrl = http://localhost:8080/api/rooms
-@roomId = 6920f0cce818bd17e3604b1f
+@roomId = 69213019c1a4041f53fd2e6e
 @contentType = application/json
 
 ### ========== ROOMS API ==========
@@ -23,8 +23,15 @@ Content-Type: {{contentType}}
   "description": "Sala acogedora para ensayos de jazz",
   "capacity": 4,
   "pricePerHour": 18.0,
-  "availableInstruments": ["Piano", "Contrabajo", "Batería Jazz"],
-  "availableMicrophones": ["AKG C414", "Shure SM57"],
+  "availableInstruments": [
+    {"name": "Piano", "quantity": 1},
+    {"name": "Contrabajo", "quantity": 1},
+    {"name": "Batería Jazz", "quantity": 1}
+  ],
+  "availableMicrophones": [
+    {"name": "AKG C414", "quantity": 2},
+    {"name": "Shure SM57", "quantity": 3}
+  ],
   "available": true
 }
 
@@ -37,8 +44,17 @@ Content-Type: {{contentType}}
   "description": "Sala amplia ideal para bandas de rock - ACTUALIZADA",
   "capacity": 6,
   "pricePerHour": 30.0,
-  "availableInstruments": ["Batería", "Amplificador Guitarra", "Amplificador Bajo", "Teclado"],
-  "availableMicrophones": ["Shure SM58", "Shure SM57", "Sennheiser e835"],
+  "availableInstruments": [
+    {"name": "Batería", "quantity": 1},
+    {"name": "Amplificador Guitarra", "quantity": 3},
+    {"name": "Amplificador Bajo", "quantity": 2},
+    {"name": "Teclado", "quantity": 1}
+  ],
+  "availableMicrophones": [
+    {"name": "Shure SM58", "quantity": 4},
+    {"name": "Shure SM57", "quantity": 3},
+    {"name": "Sennheiser e835", "quantity": 2}
+  ],
   "available": true
 }
 
@@ -57,8 +73,12 @@ Content-Type: {{contentType}}
   "description": "Sala de prueba creada automáticamente",
   "capacity": 3,
   "pricePerHour": 15.0,
-  "availableInstruments": ["Guitarra"],
-  "availableMicrophones": ["Shure SM58"],
+  "availableInstruments": [
+    {"name": "Guitarra", "quantity": 2}
+  ],
+  "availableMicrophones": [
+    {"name": "Shure SM58", "quantity": 2}
+  ],
   "available": true
 }
 
@@ -74,8 +94,15 @@ Content-Type: {{contentType}}
   "description": "Sala actualizada desde API test",
   "capacity": 5,
   "pricePerHour": 22.0,
-  "availableInstruments": ["Guitarra", "Bajo", "Batería"],
-  "availableMicrophones": ["Shure SM58", "Shure SM57"],
+  "availableInstruments": [
+    {"name": "Guitarra", "quantity": 2},
+    {"name": "Bajo", "quantity": 1},
+    {"name": "Batería", "quantity": 1}
+  ],
+  "availableMicrophones": [
+    {"name": "Shure SM58", "quantity": 3},
+    {"name": "Shure SM57", "quantity": 2}
+  ],
   "available": true
 }
 
