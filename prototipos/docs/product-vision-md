@@ -1,0 +1,53 @@
+# DOCUMENTO DE VISIÓN DEL PRODUCTO
+
+***(Versión 1.0)***
+
+## 1. Nombre del Producto
+
+Sistema de Reservas para Estudios Musicales (nombre temporal)
+
+## 2. Descripción General
+
+El sistema permitirá a estudios musicales administrar sus salas de ensayo a través de una plataforma web o móvil. El objetivo principal es facilitar la gestión de reservas, disponibilidad, horarios y pagos, con la posibilidad de ofrecer el sistema como producto instalable o como servicio (SaaS).
+
+## 3. Objetivo del Producto
+
+Crear una plataforma multi-tenant que permita a un estudio musical gestionar sus salas de manera eficiente, y que pueda ser vendida a múltiples estudios como servicio o como sistema implementado en servidores propios.
+
+## 4. Público Objetivo
+
+- Estudios musicales de 1 a 20 salas.
+- Productores y músicos que deseen reservar salas fácilmente.
+- Empresas que necesitan gestionar espacios por hora.
+
+## 5. Problema que Resuelve
+
+Administrar reservas manualmente requiere:
+
+- llamadas telefónicas,
+- WhatsApp,
+- hojas de Excel,
+- problemas de solapamiento,
+- falta de control histórico,
+- falta de pagos ordenados.
+
+> [!NOTE]
+> La plataforma elimina estas fricciones y digitaliza toda la operación.
+
+## 6. Objetivos de Negocio
+
+- Automatizar la administración de salas.
+- Evitar reservas duplicadas.
+- Ofrecer una plataforma SaaS con planes de suscripción.
+- Permitir la expansión hacia otros rubros (estudios de baile, coworks, salas de reuniones).
+
+## 7. Características principales del MVP
+
+- Registro de estudio (tenant).
+- Login con autenticación JWT.
+- CRUD de salas.
+- Gestión de disponibilidad.
+- Calendario de reservas.
+- Creación y cancelación de reservas.
+- Panel del estudio.
+- Aislamiento de datos por tenant.

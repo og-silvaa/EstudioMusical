@@ -1,0 +1,21 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: estudio-musical-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: estudiomusical
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - estudio-network
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  estudio-network:
+    driver: bridge
